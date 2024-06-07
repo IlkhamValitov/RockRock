@@ -1,0 +1,339 @@
+@font-face {
+  font-family: 'PT Sans Bold';
+  src: url("../fonts/pt-sans-bold.ttf");
+}
+@font-face {
+  font-family: 'Micra';
+  src: url("../fonts/micra.ttf");
+}
+@font-face {
+  font-family: 'Tilt Prism';
+  src: url("../fonts/prism/prism.ttf");
+}
+html,
+body {
+  margin: 0;
+  background-color: #131313;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.main_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main_container .header_container {
+  margin-top: 20px;
+  width: 100vw;
+  height: 37px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+.main_container .header_container .logo {
+  margin-left: 20px;
+  padding: 3px 10px 10px;
+  background-color: #EDFF21;
+  border-radius: 17px;
+}
+.main_container .header_container .logo h2 {
+  width: 100%;
+  height: 95%;
+  color: #131313;
+  font-family: 'Tilt Prism';
+  margin: 0;
+}
+.main_container .header_container .main_menu {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+}
+.main_container .header_container .main_menu div {
+  width: 130px;
+  height: 80%;
+  padding: 10px 10px 10px;
+  text-align: center;
+}
+.main_container .header_container .main_menu div a {
+  text-decoration: none;
+  color: #DCDCDC;
+  font-family: 'Micra', serif;
+  font-size: small;
+}
+.main_container .header_container .main_menu div:not(.search, :last-child):hover {
+  background-color: #e51616;
+  cursor: pointer;
+}
+.main_container .header_container .main_menu .search {
+  width: 130px;
+  position: relative;
+  left: 300px;
+}
+.main_container .header_container .main_menu .search img {
+  width: 15%;
+  height: 80%;
+}
+.main_container .header_container .main_menu .search .hover_change {
+  display: none;
+}
+.main_container .header_container .main_menu .search .img_visible {
+  display: block;
+  width: 15%;
+  height: 80%;
+  margin: auto;
+}
+.main_container .header_container .main_menu .search .img_hidden {
+  display: none;
+}
+.main_container .header_container .main_menu .search:hover {
+  cursor: pointer;
+}
+.main_container .header_container .main_menu .hidden_search {
+  display: none;
+}
+.main_container .header_container .main_menu .search_form {
+  width: 130px;
+  height: fit-content;
+  display: none;
+  position: relative;
+  left: 300px;
+}
+.main_container .header_container .main_menu .search_form form {
+  width: 100%;
+}
+.main_container .header_container .main_menu .search_form form input {
+  width: 100%;
+}
+.main_container .header_container .main_menu .show_search_form {
+  display: block;
+}
+.main_container .central_container {
+  width: 1366px;
+  min-height: calc(100vh - 119px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+}
+.main_container .central_container .news_section_title {
+  color: #DCDCDC;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-bottom: 0;
+  font-family: 'Micra', arial, serif;
+}
+.main_container .central_container .news_section {
+  margin-top: 30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  border-radius: 10px;
+  left: 2%;
+  top: 10%;
+  opacity: 0;
+  transform: translate3d(100vw, 0, 0);
+}
+.main_container .central_container .news_section .three_news {
+  display: flex;
+  flex-direction: row;
+}
+.main_container .central_container .news_section .three_news a {
+  text-decoration: none;
+  height: fit-content;
+}
+.main_container .central_container .news_section .three_news a .news_block {
+  transition: 1s;
+  color: #DCDCDC;
+  display: flex;
+  flex-direction: column;
+}
+.main_container .central_container .news_section .three_news a .news_block .title {
+  margin: auto;
+  padding: 10px;
+  font-family: 'PT Sans Bold', arial, serif;
+}
+.main_container .central_container .news_section .three_news a .news_block article {
+  width: 70%;
+  margin: auto;
+}
+.main_container .central_container .news_section .three_news a .news_block article p {
+  font-family: 'PT Sans Bold', arial, serif;
+}
+.main_container .central_container .news_section .three_news a .news_block article .placement_date {
+  font-size: small;
+}
+.main_container .central_container .news_section .three_news a .news_block .news_img {
+  width: 70%;
+  margin: auto;
+}
+.main_container .central_container .news_section .three_news a .news_block .news_img img {
+  width: 100%;
+}
+.main_container .central_container .news_section .three_news a .news_block:hover {
+  transition: 1s;
+  background-color: rgba(102, 90, 90, 0.63);
+}
+.main_container .central_container .show {
+  opacity: 1;
+  background-color: #131313;
+  transition: 1s;
+  transform: translate3d(0, 0, 0);
+}
+.main_container .central_container .switches {
+  position: relative;
+  top: 500px;
+  display: flex;
+  justify-content: center;
+}
+.main_container .central_container .switches div {
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  outline: 1px solid snow;
+  border-radius: 12px;
+  background-color: snow;
+}
+.main_container .central_container .switches div:hover {
+  border-radius: 24px;
+  width: 16px;
+}
+.main_container .central_container .hidden_switch {
+  opacity: 0;
+}
+.main_container .central_container main {
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 520px;
+}
+.main_container .central_container main .ra_article_title {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  position: relative;
+  color: #DCDCDC;
+  font-family: 'Micra', arial, serif;
+}
+.main_container .central_container main .ra_article_block {
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-bottom: 60px;
+}
+.main_container .central_container main .ra_article_block .ra_title {
+  color: #DCDCDC;
+  margin-left: 30px;
+  margin-bottom: 0;
+  font-family: 'Micra', arial, serif;
+}
+.main_container .central_container main .ra_article_block .ra_article {
+  margin: 0 67px;
+}
+.main_container .central_container main .ra_article_block .ra_article p {
+  color: #DCDCDC;
+  font-family: 'PT Sans Bold', arial, serif;
+}
+.main_container .central_container .bands_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.main_container .central_container .bands_block .bands_list {
+  display: flex;
+  flex-direction: row;
+}
+.main_container .central_container .bands_block .bands_list label {
+  margin: 6px;
+  transition: 1s;
+}
+.main_container .central_container .bands_block .bands_list label a {
+  text-decoration: none;
+  color: #DCDCDC;
+}
+.main_container .central_container .bands_block .bands_list label:hover {
+  cursor: pointer;
+  background-color: #DCDCDC !important;
+}
+.main_container .central_container .bands_block .bands_list label:hover a {
+  color: red !important;
+}
+.main_container .central_container .fest_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.main_container .central_container .fest_block .fest_list {
+  display: flex;
+}
+.main_container .central_container .fest_block .fest_list label {
+  margin: 2px;
+  background-color: red;
+  padding: 20px;
+  transition: 1s;
+}
+.main_container .central_container .fest_block .fest_list label a {
+  text-decoration: none;
+  color: #DCDCDC;
+}
+.main_container .central_container .fest_block .fest_list label:hover {
+  cursor: pointer;
+  background-color: #DCDCDC !important;
+}
+.main_container .central_container .fest_block .fest_list label:hover a {
+  color: red !important;
+}
+.main_container .footer_container {
+  font-family: 'PT Sans Bold', arial, serif;
+  color: #DCDCDC;
+  width: 100%;
+  height: 82px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 400px;
+  justify-content: space-between;
+}
+.main_container .footer_container .footer_menu {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  padding: 10px;
+}
+.main_container .footer_container .footer_menu div {
+  height: 23%;
+}
+.main_container .footer_container .footer_menu div a {
+  text-decoration: none;
+  color: #DCDCDC;
+  font-size: small;
+}
+.main_container .footer_container .footer_menu div:hover {
+  background-color: #e51616;
+}
+.main_container .footer_container .author_attributes {
+  padding: 10px;
+  height: 90%;
+}
+.main_container .footer_container .author_attributes p {
+  height: 23%;
+  margin: 0;
+}
+.main_container .footer_container .author_attributes p a {
+  text-decoration: none;
+}
+.main_container .footer_container .author_attributes p :hover {
+  color: #e51616;
+}
+.main_container .footer_container .date {
+  padding: 10px;
+  height: 90%;
+}
